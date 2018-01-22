@@ -1,0 +1,17 @@
+com\mpc\demo\validation\ValidEmail.class
+com\mpc\demo\entity\Privilege.class
+com\mpc\demo\entity\Role.class
+com\mpc\demo\dto\UserDto.class
+com\mpc\demo\repo\RoleRepository.class
+com\mpc\demo\service\UserService.class
+com\mpc\demo\service\IUserService.class
+com\mpc\demo\validation\PasswordMatchesValidator.class
+com\mpc\demo\entity\User.class
+com\mpc\demo\validation\EmailValidator.class
+com\mpc\demo\config\DatabaseConfiguration.class
+com\mpc\demo\validation\PasswordMatches.class
+com\mpc\demo\entity\DataModel.class
+com\mpc\demo\repo\UserRepository.class
+com\mpc\demo\controller\WelcomeController.class
+com\mpc\demo\controller\RegistrationController.class
+com\mpc\demo\Application.class
