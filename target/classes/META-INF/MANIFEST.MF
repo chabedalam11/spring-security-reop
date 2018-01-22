@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Implementation-Title: Spring Boot User Registration complete by email
+Implementation-Title: Spring Security step by step
 Implementation-Version: 1.0.1
 Built-By: medisys
 Implementation-Vendor-Id: org.springframework.boot
