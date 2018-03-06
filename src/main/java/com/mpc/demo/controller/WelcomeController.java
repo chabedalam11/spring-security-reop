@@ -24,7 +24,7 @@ public class WelcomeController {
 
 	@RequestMapping("/")
 	public String welcome(Map<String, Object> model) {
-		logger.info("request for welcome page");
+		logger.info("request for registration page");
 		model.put("message", this.message);
 		return "welcome";
 	}
