@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="fragments/generalheader :: gheader"/> 
+
+<body>
+<style type="text/css">
+	 .input-outer{
+	 	margin-bottom: 8px;
+	 }
+	 .error-msg{
+	 font-size: 8px;
+	 }
+	 
+</style>
+	<div class="page login-page">
+      <div class="container">
+        <div class="form-outer text-center d-flex align-items-center">
+          <div class="form-inner">
+            <div class="logo text-uppercase"><span>company</span>&nbsp;<strong class="text-primary">Name</strong></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+            <div class="logo text-uppercase"><strong class="text-danger">SignUp</strong></div>
+            
+            <form autocomplete="off" action="#" th:action="@{/registration}" th:object="${user}" method="post" class="form-horizontal" role="form">
+              <div  class="input-outer form-group-material">
+                <input id="register-username" type="text" th:field="*{name}"  class="input-material"/>
+                <label for="register-username" class="label-material">First Name</label>
+              </div>
+              <label th:if="${#fields.hasErrors('name')}" th:errors="*{name}"  class="error-msg text-danger"></label>
+              <div class="input-outer form-group-material">
+                <input id="register-lastname" type="text" th:field="*{lastName}" class="input-material"/>
+                <label for="register-lastname" class="label-material">Last Name</label>
+              </div>
+              <label th:if="${#fields.hasErrors('lastName')}" th:errors="*{lastName}" class="error-msg text-danger"></label>
+              <div class="input-outer form-group-material">
+                <input id="register-email" type="email" th:field="*{email}" class="input-material"/>
+                <label for="register-email" class="label-material">Email Address      </label>
+              </div>
+              <label th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="error-msg text-danger"></label>
+              <div class="input-outer form-group-material">
+                <input id="register-passowrd" type="password" th:field="*{password}" class="input-material"/>
+                <label for="register-passowrd" class="label-material">Password</label>
+              </div>
+              <label th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="error-msg text-danger"></label><br/>
+              <input id="register" type="submit" value="SignUp" class="btn btn-primary"/>
+            </form>
+            
+            <small>Already have an account? </small><a href="/" class="signup">Login</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

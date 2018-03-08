@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en" th:replace="fragments/generalheader :: gheader"> </head>
+
+<body>
+	<div class="page login-page">
+      <div class="container">
+        <div class="form-outer text-center d-flex align-items-center">
+        
+          <div class="form-inner">
+            <div class="logo text-uppercase"><span>company</span>&nbsp;<strong class="text-primary">Name</strong></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
+            <div class="logo text-uppercase"><strong class="text-danger">Login</strong></div>
+            
+            <form th:action="@{/login}" method="POST">
+              <div class="form-group-material">
+                <input type="email" name="email" class="input-material" id="login-username" required="required" />
+                <label for="login-username" class="label-material">Username</label>
+              </div>
+              <div class="form-group-material">
+                <input id="login-password" type="password" name="password" required="required" class="input-material"/>
+                <label for="login-password" class="label-material">Password</label>
+              </div>
+              <!-- <a id="login" href="index.html" class="btn btn-primary">Login</a> -->
+              <!-- This should be submit button but I replaced it with <a> for demo purposes-->
+              <div align="center" th:if="${param.error}">
+				<p style="font-size: 20; color: #FF1C19;">username or password invalid, please verify</p>
+			  </div>
+              <button type="submit" id="login" class="btn btn-primary">Sign in</button>
+            </form>
+            
+            <!-- <a href="#" class="forgot-pass">Forgot Password?</a> -->
+            <small>Do not have an account? </small><a href="/registration" class="signup">Signup</a>
+          </div>
+          
+          <!-- <div class="copyrights text-center">
+            <p>Design by <a href="https://bootstrapious.com" class="external">Bootstrapious</a></p>
+            Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)
+          </div> -->
+        </div>
+      </div>
+    </div>
+</body>
+</html>
